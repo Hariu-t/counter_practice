@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>カウンター</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    #disp-count{
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Counter</h1>
+
+  <div id="disp-count">0</div>
+  <button id="down">カウントダウン</button>
+  <button id="up">カウントアップ</button>
+
+  <script>
+    let disp_count = document.getElementById("disp-count");
+    let up = document.getElementById("up");
+    let down = document.getElementById("down");
+    let count = 0;
+
+    up.addEventListener('click', function(){
+      count ++;
+      disp_count.innerHTML = count;
+    });
+
+    down.addEventListener('click', function(){
+      disp_count.innerHTML = count;
+      if(count > 0){
+        count --;
+      }else {
+        count -= 0;
+      };
+    });
+
+  </script>
+</body>
+</html>
